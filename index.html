@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          var _fetch = typeof window.fetch === 'function' ? window.fetch.bind(window) : window.fetch;
+          try {
+            Object.defineProperty(window, 'fetch', {
+              get: function () {
+                return _fetch;
+              },
+              set: function (fn) {
+                _fetch = fn;
+              },
+              configurable: true,
+              enumerable: true,
+            });
+          } catch (e1) {}
+
+          if (typeof Window !== 'undefined' && Window.prototype) {
+            try {
+              Object.defineProperty(Window.prototype, 'fetch', {
+                get: function () {
+                  return _fetch;
+                },
+                set: function (fn) {
+                  _fetch = fn;
+                },
+                configurable: true,
+                enumerable: true,
+              });
+            } catch (e2) {}
+          }
+
+          window.addEventListener('error', function (event) {
+            if (event && event.message && event.message.indexOf('Cannot set property fetch') !== -1) {
+              event.preventDefault();
+              event.stopImmediatePropagation && event.stopImmediatePropagation();
+              return true;
+            }
+          }, true);
+        } catch (err) {
+          // ignore
+        }
+      })();
+    </script>
+    <title>Shree Bhagwati Dental Clinic | Rohtak, Haryana</title>
+    <meta name="description" content="Trusted, painless, and affordable dental care in Rohtak by a doctor with 5 Years of clinical experience. Book an appointment today." />
+    <meta property="og:title" content="Shree Bhagwati Dental Clinic | Rohtak, Haryana" />
+    <meta property="og:description" content="Trusted, painless, and affordable dental care in Rohtak by a doctor with 5 Years of clinical experience." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

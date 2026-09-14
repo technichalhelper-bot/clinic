@@ -1,0 +1,6 @@
+{
+  "name": "Shree Bhagwati Dental Clinic",
+  "description": "Official website for Shree Bhagwati Dental Clinic in Rohtak, Haryana providing trusted, painless, and affordable dental care.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+/* High-Contrast Dark Mode & Accessibility Theming */
+html {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+html.dark {
+  background-color: #0b0f19;
+  color: #f8fafc;
+  color-scheme: dark;
+}
+
+/* High contrast background overrides for enhanced readability */
+.dark body {
+  background-color: #0b0f19;
+  color: #f8fafc;
+}
+
+.dark header {
+  background-color: #0f172a !important;
+  border-color: #334155 !important;
+}
+
+.dark #mobile-nav-drawer {
+  background-color: #0f172a !important;
+  border-color: #334155 !important;
+}
+
+/* Dark mode surface elevations with high-contrast borders */
+.dark .bg-white {
+  background-color: #131d31 !important;
+  color: #f8fafc !important;
+}
+
+.dark .bg-slate-50,
+.dark .bg-gray-50 {
+  background-color: #0b0f19 !important;
+}
+
+.dark .bg-slate-100 {
+  background-color: #1e293b !important;
+}
+
+.dark .border-slate-100,
+.dark .border-slate-200,
+.dark .border-slate-300 {
+  border-color: #334155 !important;
+}
+
+.dark .border-b,
+.dark .border-t,
+.dark .border {
+  border-color: #334155;
+}
+
+/* Text contrast enhancements for accessibility (WCAG AAA compliant) */
+.dark .text-slate-900,
+.dark .text-slate-800 {
+  color: #ffffff !important;
+}
+
+.dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-blue-950,
+.dark .text-\[\#0f4c64\] {
+  color: #60a5fa !important; /* High contrast blue/sky for clinic brand headers */
+}
+
+/* Service cards, review cards, instagram cards */
+.dark .shadow-xs,
+.dark .shadow-sm,
+.dark .shadow-md,
+.dark .shadow-lg {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Inputs & Form controls in high-contrast dark mode */
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+  border-color: #475569 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.dark input:focus,
+.dark select:focus,
+.dark textarea:focus {
+  border-color: #3b82f6 !important;
+  outline: 2px solid #3b82f6 !important;
+}
+
+/* High contrast focus ring for keyboard accessibility */
+.dark button:focus-visible,
+.dark a:focus-visible {
+  outline: 2px solid #60a5fa !important;
+  outline-offset: 2px !important;
+}
+
+/* Badge and tag contrast adjustments in dark mode */
+.dark .bg-emerald-50,
+.dark .bg-emerald-100 {
+  background-color: rgba(37, 99, 235, 0.2) !important;
+  color: #93c5fd !important;
+}
+
+.dark .bg-pink-50,
+.dark .bg-pink-100 {
+  background-color: rgba(236, 72, 153, 0.2) !important;
+  color: #f472b6 !important;
+}
+
+.dark .bg-blue-50,
+.dark .bg-blue-100 {
+  background-color: rgba(59, 130, 246, 0.2) !important;
+  color: #93c5fd !important;
+}
+
+/* High contrast card borders */
+.dark .rounded-xl,
+.dark .rounded-2xl,
+.dark .rounded-lg {
+  border-color: #334155;
+}
+
+
